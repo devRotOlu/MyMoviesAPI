@@ -5,6 +5,12 @@ VisualStudioVersion = 17.14.36414.22 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMovies.API", "MyMovies.API.csproj", "{549BF67F-67DD-453C-BF9F-F34125539464}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMovies.Application", "..\MyMovies.Application\MyMovies.Application.csproj", "{0B2351AD-FBDA-4F47-B99B-3D157C62F01B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMovies.Domain", "..\MyMovies.Domain\MyMovies.Domain.csproj", "{BE18E2B4-1E98-4A59-8BAA-D77F76316854}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMovies.Infrastructure", "..\MyMovies.Infrastructure\MyMovies.Infrastructure.csproj", "{25A891B2-49B9-4973-B6F5-779914A2F496}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{549BF67F-67DD-453C-BF9F-F34125539464}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{549BF67F-67DD-453C-BF9F-F34125539464}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{549BF67F-67DD-453C-BF9F-F34125539464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B2351AD-FBDA-4F47-B99B-3D157C62F01B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2351AD-FBDA-4F47-B99B-3D157C62F01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2351AD-FBDA-4F47-B99B-3D157C62F01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2351AD-FBDA-4F47-B99B-3D157C62F01B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE18E2B4-1E98-4A59-8BAA-D77F76316854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE18E2B4-1E98-4A59-8BAA-D77F76316854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE18E2B4-1E98-4A59-8BAA-D77F76316854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE18E2B4-1E98-4A59-8BAA-D77F76316854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25A891B2-49B9-4973-B6F5-779914A2F496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25A891B2-49B9-4973-B6F5-779914A2F496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25A891B2-49B9-4973-B6F5-779914A2F496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25A891B2-49B9-4973-B6F5-779914A2F496}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
