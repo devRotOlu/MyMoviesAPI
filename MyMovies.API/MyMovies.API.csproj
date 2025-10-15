@@ -8,12 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyMovies.Application\MyMovies.Application.csproj" />
-    <ProjectReference Include="..\MyMovies.Infrastructure\MyMovies.Infrastructure.csproj" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.7" />
+	<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\MyMovies.Application\MyMovies.Application.csproj" />
+    <ProjectReference Include="..\MyMovies.Infrastructure\MyMovies.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

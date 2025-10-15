@@ -1,35 +1,45 @@
-//namespace MyMovies.API
-//{
-//    public class Program
-//    {
-//        public static void Main(string[] args)
-//        {
-//            var builder = WebApplication.CreateBuilder(args);
-
-//            // Add services to the container.
-
-//            builder.Services.AddControllers();
-
-//            var app = builder.Build();
-
-//            // Configure the HTTP request pipeline.
-
-//            app.UseHttpsRedirection();
-
-//            app.UseAuthorization();
-
-
-//            app.MapControllers();
-
-//            app.Run();
-//        }
-//    }
-//}
-
+using MyMovies.API;
 using MyMovies.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 {
     builder.Services
         .AddInfrastructure(builder.Configuration);
+
+    var environment = builder.Environment;
+
+    builder.Services.AddControllers().AddNewtonsoftJson(op =>
+    {
+        op.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+        op.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
+    });
+
+    builder.Services.AddAuthorization();
+
+    if (environment.IsDevelopment()) builder.Services.ConfigureSwagger();
+
+    //builder.Services.ConfigureAuthentication(builder);
 }
+
+var app = builder.Build();
+{
+
+    //Configure the HTTP request pipeline.
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
+
+    app.UseStaticFiles();
+
+    app.UseRouting();
+    app.UseHttpsRedirection();
+    app.UseAuthentication();
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    app.Run();
+}
+

@@ -11,5 +11,6 @@
         public string VideoPath { get; set; } = null!;
         public DateTime ReleaseDate { get; set; }
         public int DurationMinutes { get; set; }
+        public DateTime AddedAt { get; } = DateTime.UtcNow;
     }
 }
